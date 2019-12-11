@@ -1,0 +1,394 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SourceMap · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../babel/babel.html" />
+    
+    
+    <link rel="prev" href="../devServer/devServer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../entry/Entry.html">
+            
+                <a href="../entry/Entry.html">
+            
+                    
+                    Entry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../output/Output.html">
+            
+                <a href="../output/Output.html">
+            
+                    
+                    Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../loader/Loader.html">
+            
+                <a href="../loader/Loader.html">
+            
+                    
+                    Loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../plugin/plugin.html">
+            
+                <a href="../plugin/plugin.html">
+            
+                    
+                    Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../devServer/devServer.html">
+            
+                <a href="../devServer/devServer.html">
+            
+                    
+                    DevServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="sourcemap.html">
+            
+                <a href="sourcemap.html">
+            
+                    
+                    SourceMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../babel/babel.html">
+            
+                <a href="../babel/babel.html">
+            
+                    
+                    Babel配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../hotModuleRepalacement/HMR.html">
+            
+                <a href="../hotModuleRepalacement/HMR.html">
+            
+                    
+                    HotModuleReplacement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SourceMap</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="mode">mode</h2>
+<p>&#x5728;development&#x6A21;&#x5F0F;&#x5DF2;&#x7ECF;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4E86;
+sourceMap</p>
+<h2 id="&#x914D;&#x7F6E;&#x5173;&#x6389;sourcemap">&#x914D;&#x7F6E;&#x5173;&#x6389;sourceMap</h2>
+<p>devtool:&apos;none&apos;,</p>
+<h2 id="sourcemap">sourceMap</h2>
+<p>&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x6E90;&#x4EE3;&#x7801;&#x54EA;&#x91CC;&#x51FA;&#x9519;&#x4E86;&#x800C;&#x4E0D;&#x662F;&#x544A;&#x8BC9;&#x6253;&#x5305;&#x7ED3;&#x675F;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x54EA;&#x91CC; &#x6709;&#x95EE;&#x9898;<br>
+sourceMap&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x5173;&#x7CFB;,&#x4ED6;&#x77E5;&#x9053;dist&#x76EE;&#x5F55;&#x4E0B;main.js&#x6587;&#x4EF6;96&#x5B9E;&#x9645;&#x4E0A;&#x5BF9;&#x5E94;&#x7684;&#x662F;src&#x76EE;&#x5F55;&#x4E0B;index.js&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;sourcemap">&#x4F7F;&#x7528;sourceMap</h2>
+<p>&#x628A;devtool:&apos;source-map&apos;
+ &#x5C31;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x662F;&#x54EA;&#x91CC;&#x9519;&#x4E86;</p>
+<h2 id="inline-source-map">inline-source-map</h2>
+<p>devtool:&apos;inline-source-map&apos;
+&#x5F53;&#x4F7F;&#x7528;inline-source-map&#x7684;&#x65F6;&#x5019;
+&#x4F1A;main.js.map&#x7684;&#x4F1A;&#x6253;&#x5305;&#x653E;&#x5165;js&#x6587;&#x4EF6;&#x4E2D;</p>
+<h2 id="cheap-inline-source-map">cheap-inline-source-map</h2>
+<p>devtool:&apos;cheap-inline-source-map&apos;
+&#x5F53;&#x4EE3;&#x7801;&#x91CF;&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B63;&#x597D;&#x4EE3;&#x7801;&#x51FA;&#x9519;&#x4E86;&#x3002;
+cheap&#x4F1A;&#x544A;&#x8BC9;&#x4EE3;&#x7801;&#x5230;&#x5E95;&#x5728;&#x90A3;&#x91CC;&#x4E00;&#x884C;&#x51FA;&#x9519;&#x4E86;&#x3002;
+&#x8FD9;&#x6837;&#x6BD4;&#x8F83;&#x8017;&#x6027;&#x80FD;&#x3002;
+&#x5982;&#x679C;&#x5199;&#x4E86;cheap&#x53EA;&#x9488;&#x5BF9;&#x4E1A;&#x52A1;&#x6587;&#x4EF6;&#x3002;&#x4E0D;&#x4F1A;&#x7BA1;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x7684;&#x95EE;&#x9898;
+&#x6BD4;&#x5982;&#x8BF4;loader&#xFF0C;&#x6216;&#x8005;plugin&#x3002;
+&#x5982;&#x679C;&#x60F3;&#x8BA9;cheap&#x7BA1;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+cheap-module-eval-source-map</p>
+<h2 id="eval">eval</h2>
+<p>&#x6253;&#x5305;&#x901F;&#x5EA6;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5F0F;&#x3002;
+&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x5E2E;&#x6211;&#x4EEC;&#x628A;&#x9519;&#x8BEF;&#x5B9A;&#x4F4D;&#x5230;&#x54EA;&#x91CC;&#x3002;
+&#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;map&#x6587;&#x4EF6;&#x6216;&#x8005;base64.
+&#x4F1A;&#x5F62;&#x6210;eval()&#x6765;&#x89E3;&#x6790;</p>
+<h2 id="cheap-module-eval-source-map">cheap-module-eval-source-map</h2>
+<p>&#x63A8;&#x8350;&#x4F7F;&#x7528;
+&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6253;&#x5305;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;&#x3002;
+&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x62A5;&#x9519;&#x4E5F;&#x6BD4;&#x8F83;&#x5168;&#x9762;&#x3002;</p>
+<h2 id="&#x7EBF;&#x4E0A;&#x4F7F;&#x7528;">&#x7EBF;&#x4E0A;&#x4F7F;&#x7528;</h2>
+<p>mode: &apos;production&apos;
+devtool:&apos;cheap-module-source-map&apos;</p>
+<h2 id="&#x5F00;&#x53D1;&#x4F7F;&#x7528;">&#x5F00;&#x53D1;&#x4F7F;&#x7528;</h2>
+<p>mode:&apos;development&apos;
+devtool:&apos;&apos;</p>
+<h2 id="&#x89E3;&#x51B3;&#x95EE;&#x9898;">&#x89E3;&#x51B3;&#x95EE;&#x9898;</h2>
+<p>&#x5982;&#x679C;&#x4EE3;&#x7801;&#x51FA;&#x9519;&#x4E86;&#x53EA;&#x77E5;&#x9053;&#x6253;&#x5305;&#x51FA;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x7B2C;&#x51E0;&#x884C;&#x9519;&#x4E86;&#x3002;
+&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;sourcemap&#x4F1A;&#x628A;&#x9519;&#x8BEF;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#x505A;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x77E5;&#x9053;&#x539F;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x5728;&#x90A3;&#x91CC;&#x9519;&#x4E86;</p>
+<h2 id="source-map">source-map</h2>
+<p>&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;.map &#x6587;&#x4EF6;</p>
+<h2 id="inline">inline</h2>
+<p>&#x4F1A;&#x628A;&#x751F;&#x6210;&#x7684;.map&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x5230;&#x6253;&#x5305;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x4E4B;&#x4E2D;&#x3002;</p>
+<h2 id="cheap">cheap</h2>
+<ol>
+<li>&#x53EA;&#x63D0;&#x793A;&#x7B2C;&#x51E0;&#x884C;&#x51FA;&#x9519;&#x4E86;,&#x4E0D;&#x63D0;&#x793A;&#x51E0;&#x5217;&#x51FA;&#x9519;&#x4E86;</li>
+<li>&#x53EA;&#x8D1F;&#x8D23;&#x4E1A;&#x52A1;&#x7684;&#x4EE3;&#x7801;&#x51FA;&#x9519;&#xFF0C;&#x4E0D;&#x7BA1;module&#x51FA;&#x9519;&#x7684;&#x4EE3;&#x7801;</li>
+</ol>
+<h2 id="module">module</h2>
+<p>&#x5982;&#x679C; module&#x51FA;&#x9519;&#x4F1A;&#x6307;&#x51FA;module&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x54EA;&#x91CC;&#x9519;&#x4E86;&#x3002;</p>
+<h2 id="eval-&#x6267;&#x884C;&#x65B9;&#x5F0F;">eval &#x6267;&#x884C;&#x65B9;&#x5F0F;</h2>
+<p>&#x901A;&#x8FC7;eval&#x7684;&#x65B9;&#x5F0F;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x3002;</p>
+<h2 id="soucemap&#x7684;&#x539F;&#x7406;&#x3002;">souceMap&#x7684;&#x539F;&#x7406;&#x3002;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../devServer/devServer.html" class="navigation navigation-prev " aria-label="Previous page: DevServer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../babel/babel.html" class="navigation navigation-next " aria-label="Next page: Babel配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SourceMap","level":"1.7","depth":1,"next":{"title":"Babel配置","level":"1.8","depth":1,"path":"note/babel/babel.md","ref":"note/babel/babel.md","articles":[]},"previous":{"title":"DevServer","level":"1.6","depth":1,"path":"note/devServer/devServer.md","ref":"note/devServer/devServer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/SourceMap/sourcemap.md","mtime":"2019-12-11T11:12:19.165Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T11:31:27.390Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
